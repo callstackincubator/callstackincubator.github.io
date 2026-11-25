@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Page not found</title>
+  <script>
+    // Project sites move when their repository is renamed, and GitHub Pages does not
+    // redirect the old path. Unclaimed paths land here, so forward the old prefixes.
+    (function () {
+      var moved = {
+        "codex-mobile-dev-plugin": "mobile-dev"
+      };
+      var match = /^\/([^/]+)(\/.*)?$/.exec(window.location.pathname);
+      if (match === null || !Object.prototype.hasOwnProperty.call(moved, match[1])) return;
+      var target = "/" + moved[match[1]] + (match[2] || "/") + window.location.search + window.location.hash;
+      window.location.replace(target);
+    })();
+  </script>
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; margin: 0; display: grid; place-items: center; min-height: 100vh; color: #111; }
+    main { padding: 24px; text-align: center; }
+    a { color: inherit; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Page not found</h1>
+    <p>See <a href="https://callstack.com/open-source/?utm_source=incubator.callstack.com&amp;utm_medium=referral&amp;utm_campaign=redirection">Callstack open source</a> for our projects.</p>
+  </main>
+</body>
+</html>
